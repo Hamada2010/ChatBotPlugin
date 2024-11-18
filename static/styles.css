@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Chatbot button and window container */
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+/* Chatbot toggle button */
+#chatbot-toggle {
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#chatbot-toggle:hover {
+  background-color: #45a049;
+}
+
+/* Chatbot window styling */
+#chatbot-window {
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none; /* Hidden by default */
+}
+
+/* Chatbot header */
+#chatbot-header {
+  background: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Chat messages container with scroll */
+#chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scroll */
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  max-height: 300px; /* Set a height limit */
+  scrollbar-width: thin; /* Thin scroll bar for modern browsers */
+  scrollbar-color: #4caf50 #f9f9f9; /* Custom scroll bar colors */
+}
+
+/* Custom scroll bar styling (Webkit-based browsers) */
+#chatbot-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chatbot-messages::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+/* Chat message styles */
+#chatbot-messages .user {
+  text-align: right;
+  margin: 5px;
+  color: blue;
+}
+
+#chatbot-messages .bot {
+  text-align: left;
+  margin: 5px;
+  color: green;
+}
+
+/* Chat input field */
+#chatbot-input {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #ddd;
+}
+
+/* Style for when the user is typing */
+#chatbot-input:focus {
+  outline: none;
+  border-color: #4caf50; /* Highlight the input field when focused */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  #chatbot-window {
+      width: 100%;
+      max-width: 350px;
+  }
+
+  #chatbot-toggle {
+      padding: 8px 15px;
+  }
+}
